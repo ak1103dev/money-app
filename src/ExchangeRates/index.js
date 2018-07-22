@@ -2,11 +2,11 @@ import React from 'react';
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 
-const ExchangeRates = () => (
+const ExchangeRates = ({ currency }) => (
   <Query
     query={gql`
       {
-        rates(currency: "USD") {
+        rates(currency: "${currency}") {
           currency
           rate
         }
@@ -19,7 +19,7 @@ const ExchangeRates = () => (
 
       return data.rates.map(({ currency, rate }) => (
         <div key={currency}>
-          <p>{`${currency}: ${rate}`}</p>
+          <p>{`${rate} ${currency}`}</p>
         </div>
       ));
     }}
