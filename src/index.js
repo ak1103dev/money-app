@@ -4,6 +4,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 

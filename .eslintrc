@@ -6,6 +6,7 @@
     "mocha":true
   },
   "extends": ["airbnb", "plugin:prettier/recommended"],
+  "parser": "babel-eslint",
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

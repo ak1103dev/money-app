@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from '../HomePage';
+import LoginPage from '../LoginPage';
+import RegisterPage from '../RegisterPage';
+
 import AdminLayout from '../AdminLayout';
-import NotFoundPage from '../NotFoundPage';
 import DashboardLayout from '../DashboardLayout';
+
+import NotFoundPage from '../NotFoundPage';
+
+import NavBar from '../../components/NavBar';
 
 class App extends Component {
   constructor() {
@@ -15,14 +21,19 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
+        <div>
+          <NavBar />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/signup" component={RegisterPage} />
 
-          <Route path="/admin" component={AdminLayout} />
-          <Route path="/" component={DashboardLayout} />
+            <Route path="/admin" component={AdminLayout} />
+            <Route path="/" component={DashboardLayout} />
 
-          <Route component={NotFoundPage} />
-        </Switch>
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
       </Router>
     );
   }
