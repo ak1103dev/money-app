@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import DashboardPage from '../DashboardPage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import HomePage from '../HomePage';
+import AdminLayout from '../AdminLayout';
+import NotFoundPage from '../NotFoundPage';
+import DashboardLayout from '../DashboardLayout';
 
 class App extends Component {
   constructor() {
@@ -12,14 +15,14 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <Link to="/">Home</Link>
-          <Link to="/dashboard">Dashboard</Link>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/dashboard" component={DashboardPage} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+
+          <Route path="/admin" component={AdminLayout} />
+          <Route path="/" component={DashboardLayout} />
+
+          <Route component={NotFoundPage} />
+        </Switch>
       </Router>
     );
   }
