@@ -12,7 +12,7 @@ function buildStory(attrs) {
   return <NavBar {...props} />;
 }
 
-storiesOf('Task', module)
+storiesOf('NavBar', module)
   .addDecorator(story => (
     <div className="list-items" style={{ background: 'white' }}>
       {story()}
