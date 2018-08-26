@@ -6,7 +6,7 @@ const DefaultButton = styled.button`
   background-color: #d3d3d3;
   border-radius: 3px;
   color: #444444;
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px;
   border: 1px solid #d3d3d3;
   margin-right: 5px;
