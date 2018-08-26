@@ -2,4 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: #444444;
+  background-color: #f0f0f0;
+}
+
+/* background color */
+
+.bg-primary {
+  background-color: #FFBF00;
+}
+.bg-secondary {
+  background-color: #0F8255;
 }

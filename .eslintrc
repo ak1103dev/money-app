@@ -8,8 +8,20 @@
   "extends": ["airbnb", "plugin:prettier/recommended"],
   "parser": "babel-eslint",
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }],
+    "prettier/prettier": [
+      "error", {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/jsx-one-expression-per-line": 0
+    "react/jsx-one-expression-per-line": 0,
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
   }
 }
