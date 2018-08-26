@@ -39,12 +39,12 @@ class NavBar extends Component {
           <Justify>
             <Section>
               <Image
-                alt="Wimangsa"
+                alt="Mangkang"
                 src="https://avatars1.githubusercontent.com/u/8772991?s=460&v=4"
                 width={40}
                 height={40}
               />
-              <Name>Wimangsa</Name>
+              <Name>Mangkang</Name>
             </Section>
             {isAuth ? (
               <Section>

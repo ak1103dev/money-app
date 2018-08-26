@@ -21,4 +21,7 @@ storiesOf('Button', module)
   .add('primary', () => buildStory({ primary: true, children: 'primary' }))
   .add('secondary', () =>
     buildStory({ secondary: true, children: 'secondary' })
+  )
+  .add('fullWidth', () =>
+    buildStory({ fullWidth: true, children: 'full width' })
   );

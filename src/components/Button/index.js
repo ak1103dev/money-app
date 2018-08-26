@@ -10,6 +10,7 @@ const DefaultButton = styled.button`
   padding: 10px;
   border: 1px solid #d3d3d3;
   margin-right: 5px;
+  width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   :hover {
     cursor: pointer;
     background-color: #dcdcdc;
@@ -59,11 +60,13 @@ class Button extends Component {
 Button.defaultProps = {
   primary: false,
   secondary: false,
+  fullWidth: false,
   children: '',
 };
 Button.propTypes = {
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
+  fullWidth: PropTypes.bool,
   children: PropTypes.node,
 };
 
