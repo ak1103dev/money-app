@@ -4,17 +4,26 @@ import styled from 'styled-components';
 
 import Container from '../Container';
 import Button from '../Button';
+import Image from '../Image';
 
+const Bg = styled.div`
+  background-color: #ffbf00;
+`;
 const Justify = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
 `;
-const Logo = styled.img`
-  background-color: black;
+const Section = styled.div`
+  display: flex;
+  align-items: center;
 `;
-const Name = styled.div``;
-const Section = styled.div``;
+const Name = styled.div`
+  display: flex;
+  color: white;
+  align-items: center;
+`;
 
 class NavBar extends Component {
   constructor(props) {
@@ -25,27 +34,38 @@ class NavBar extends Component {
   render() {
     const { isAuth } = this.props;
     return (
-      <Container className="bg-primary">
-        <Justify>
-          <Section>
-            <Logo />
-            <Name>Wimangsa</Name>
-          </Section>
-          <Section>
+      <Bg>
+        <Container>
+          <Justify>
+            <Section>
+              <Image
+                alt="Wimangsa"
+                src="https://avatars1.githubusercontent.com/u/8772991?s=460&v=4"
+                width={40}
+                height={40}
+              />
+              <Name>Wimangsa</Name>
+            </Section>
             {isAuth ? (
-              <div>
-                <Button>Login</Button>
-                <Button>Signup</Button>
-              </div>
+              <Section>
+                <Button secondary>Login</Button>
+                <Button secondary>Signup</Button>
+              </Section>
             ) : (
-              <div>
-                <Button>Add account</Button>
-                <Logo />
-              </div>
+              <Section>
+                <Button primary>Add account</Button>
+                <Image
+                  circle
+                  alt="User"
+                  src="https://avatars1.githubusercontent.com/u/8772991?s=460&v=4"
+                  width={40}
+                  height={40}
+                />
+              </Section>
             )}
-          </Section>
-        </Justify>
-      </Container>
+          </Justify>
+        </Container>
+      </Bg>
     );
   }
 }

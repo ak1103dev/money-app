@@ -8,6 +8,8 @@ const DefaultButton = styled.button`
   color: #444444;
   font-size: 18px;
   padding: 10px;
+  border: 1px solid #d3d3d3;
+  margin-right: 5px;
   :hover {
     cursor: pointer;
     background-color: #dcdcdc;
@@ -22,6 +24,7 @@ const DefaultButton = styled.button`
 const PrimaryButton = styled(DefaultButton)`
   color: #ffffff;
   background-color: #ffbf00;
+  border: 1px solid #ffbf00;
   :hover {
     background-color: #ffcf40;
   }
@@ -29,6 +32,7 @@ const PrimaryButton = styled(DefaultButton)`
 const SecondaryButton = styled(DefaultButton)`
   color: #ffffff;
   background-color: #008000;
+  border: 1px solid #008000;
   :hover {
     background-color: #228b22;
   }
