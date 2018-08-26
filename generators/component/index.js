@@ -15,15 +15,21 @@ module.exports = {
             : true;
         }
         return 'The name is required';
-      }
-    }
+      },
+    },
   ],
   actions: [
     {
       type: 'add',
       path: '../src/components/{{properCase name}}/index.js',
       templateFile: './component/index.js.hbs',
-      abortOnFail: true
-    }
-  ]
+      abortOnFail: true,
+    },
+    {
+      type: 'add',
+      path: '../src/components/{{properCase name}}/index.story.js',
+      templateFile: './component/index.story.js.hbs',
+      abortOnFail: true,
+    },
+  ],
 };

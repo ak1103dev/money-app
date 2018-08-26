@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
-class {{properCase name}} extends Component {
+class Image extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   render() {
-    return <div>{{properCase name}}</div>;
+    return <div>Image</div>;
   }
 }
 
-{{properCase name}}.propTypes = {};
+Image.propTypes = {};
 
-export default {{properCase name}};
+export default Image;

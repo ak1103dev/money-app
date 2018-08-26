@@ -15,15 +15,15 @@ module.exports = {
             : true;
         }
         return 'The name is required';
-      }
-    }
+      },
+    },
   ],
   actions: [
     {
       type: 'add',
       path: '../src/containers/{{properCase name}}/index.js',
       templateFile: './container/index.js.hbs',
-      abortOnFail: true
-    }
-  ]
+      abortOnFail: true,
+    },
+  ],
 };
