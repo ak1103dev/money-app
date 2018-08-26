@@ -1,18 +1,33 @@
-import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-class Image extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Background = styled.img`
+  background-image: ${({ src }) => `url(${src})`};
+  width: ${({ width }) => `${width}px`};
+  height: ${({ height }) => `${height}px`};
+  border-radius: ${({ circle }) => (circle ? '50%' : 0)};
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+`;
 
-  render() {
-    return <div>Image</div>;
-  }
+function Image(props) {
+  return <Background {...props} />;
 }
 
-Image.propTypes = {};
+Image.defaultProps = {
+  circle: false,
+  width: 20,
+  height: 20,
+};
+Image.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  circle: PropTypes.bool,
+};
 
 export default Image;
